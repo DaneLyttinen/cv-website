@@ -23,6 +23,28 @@
           "buildMultiTargeting/BlazorFluentUI.BFUBaseComponent.props": {}
         }
       },
+      "BlazorFluentUI.BFUButton/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "BlazorFluentUI.BFUBaseComponent": "4.0.2",
+          "BlazorFluentUI.BFUContextualMenu": "4.0.2",
+          "BlazorFluentUI.BFUIcon": "4.0.2",
+          "BlazorFluentUI.BFUKeytip": "4.0.2",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/BlazorFluentUI.BFUButton.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/BlazorFluentUI.BFUButton.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorFluentUI.BFUButton.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorFluentUI.BFUButton.props": {}
+        }
+      },
       "BlazorFluentUI.BFUCallout/4.0.2": {
         "type": "package",
         "dependencies": {
@@ -57,6 +79,29 @@
           "lib/net5.0/BlazorFluentUI.BFUComponentStyle.dll": {}
         }
       },
+      "BlazorFluentUI.BFUContextualMenu/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "BlazorFluentUI.BFUBaseComponent": "4.0.2",
+          "BlazorFluentUI.BFUCallout": "4.0.2",
+          "BlazorFluentUI.BFUFocusZone": "4.0.2",
+          "BlazorFluentUI.BFUIcon": "4.0.2",
+          "BlazorFluentUI.BFUResponsiveLayout": "4.0.2",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/BlazorFluentUI.BFUContextualMenu.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/BlazorFluentUI.BFUContextualMenu.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorFluentUI.BFUContextualMenu.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorFluentUI.BFUContextualMenu.props": {}
+        }
+      },
       "BlazorFluentUI.BFUDelayedRender/4.0.2": {
         "type": "package",
         "dependencies": {
@@ -67,6 +112,25 @@
         },
         "runtime": {
           "lib/net5.0/BlazorFluentUI.BFUDelayedRender.dll": {}
+        }
+      },
+      "BlazorFluentUI.BFUFocusZone/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "BlazorFluentUI.BFUBaseComponent": "4.0.2",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/BlazorFluentUI.BFUFocusZone.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/BlazorFluentUI.BFUFocusZone.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorFluentUI.BFUFocusZone.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorFluentUI.BFUFocusZone.props": {}
         }
       },
       "BlazorFluentUI.BFUIcon/4.0.2": {
@@ -152,6 +216,39 @@
         },
         "runtime": {
           "lib/net5.0/BlazorFluentUI.BFUPopup.dll": {}
+        }
+      },
+      "BlazorFluentUI.BFUResponsiveLayout/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "BlazorFluentUI.BFUBaseComponent": "4.0.2",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/BlazorFluentUI.BFUResponsiveLayout.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/BlazorFluentUI.BFUResponsiveLayout.dll": {}
+        }
+      },
+      "BlazorFluentUI.BFUSlider/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "BlazorFluentUI.BFUBaseComponent": "4.0.2",
+          "BlazorFluentUI.BFULabel": "4.0.2",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/BlazorFluentUI.BFUSlider.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/BlazorFluentUI.BFUSlider.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorFluentUI.BFUSlider.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorFluentUI.BFUSlider.props": {}
         }
       },
       "BlazorFluentUI.BFUTextField/4.0.2": {
@@ -844,6 +941,28 @@
           "buildMultiTargeting/BlazorFluentUI.BFUBaseComponent.props": {}
         }
       },
+      "BlazorFluentUI.BFUButton/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "BlazorFluentUI.BFUBaseComponent": "4.0.2",
+          "BlazorFluentUI.BFUContextualMenu": "4.0.2",
+          "BlazorFluentUI.BFUIcon": "4.0.2",
+          "BlazorFluentUI.BFUKeytip": "4.0.2",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/BlazorFluentUI.BFUButton.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/BlazorFluentUI.BFUButton.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorFluentUI.BFUButton.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorFluentUI.BFUButton.props": {}
+        }
+      },
       "BlazorFluentUI.BFUCallout/4.0.2": {
         "type": "package",
         "dependencies": {
@@ -878,6 +997,29 @@
           "lib/net5.0/BlazorFluentUI.BFUComponentStyle.dll": {}
         }
       },
+      "BlazorFluentUI.BFUContextualMenu/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "BlazorFluentUI.BFUBaseComponent": "4.0.2",
+          "BlazorFluentUI.BFUCallout": "4.0.2",
+          "BlazorFluentUI.BFUFocusZone": "4.0.2",
+          "BlazorFluentUI.BFUIcon": "4.0.2",
+          "BlazorFluentUI.BFUResponsiveLayout": "4.0.2",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/BlazorFluentUI.BFUContextualMenu.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/BlazorFluentUI.BFUContextualMenu.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorFluentUI.BFUContextualMenu.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorFluentUI.BFUContextualMenu.props": {}
+        }
+      },
       "BlazorFluentUI.BFUDelayedRender/4.0.2": {
         "type": "package",
         "dependencies": {
@@ -888,6 +1030,25 @@
         },
         "runtime": {
           "lib/net5.0/BlazorFluentUI.BFUDelayedRender.dll": {}
+        }
+      },
+      "BlazorFluentUI.BFUFocusZone/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "BlazorFluentUI.BFUBaseComponent": "4.0.2",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/BlazorFluentUI.BFUFocusZone.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/BlazorFluentUI.BFUFocusZone.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorFluentUI.BFUFocusZone.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorFluentUI.BFUFocusZone.props": {}
         }
       },
       "BlazorFluentUI.BFUIcon/4.0.2": {
@@ -973,6 +1134,39 @@
         },
         "runtime": {
           "lib/net5.0/BlazorFluentUI.BFUPopup.dll": {}
+        }
+      },
+      "BlazorFluentUI.BFUResponsiveLayout/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "BlazorFluentUI.BFUBaseComponent": "4.0.2",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/BlazorFluentUI.BFUResponsiveLayout.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/BlazorFluentUI.BFUResponsiveLayout.dll": {}
+        }
+      },
+      "BlazorFluentUI.BFUSlider/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "BlazorFluentUI.BFUBaseComponent": "4.0.2",
+          "BlazorFluentUI.BFULabel": "4.0.2",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/BlazorFluentUI.BFUSlider.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/BlazorFluentUI.BFUSlider.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorFluentUI.BFUSlider.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorFluentUI.BFUSlider.props": {}
         }
       },
       "BlazorFluentUI.BFUTextField/4.0.2": {
@@ -1668,6 +1862,24 @@
         "staticwebassets/styles.css"
       ]
     },
+    "BlazorFluentUI.BFUButton/4.0.2": {
+      "sha512": "L5ElsNQyV+io/MjJHHasCsviRrAPltDzDnRjy5sRzkbtPMThX/ud+HugIFGAYZAkTwOlCCKPIS7C4Aw8PZFWcQ==",
+      "type": "package",
+      "path": "blazorfluentui.bfubutton/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "blazorfluentui.bfubutton.4.0.2.nupkg.sha512",
+        "blazorfluentui.bfubutton.nuspec",
+        "build/BlazorFluentUI.BFUButton.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/BlazorFluentUI.BFUButton.props",
+        "buildTransitive/BlazorFluentUI.BFUButton.props",
+        "lib/net5.0/BlazorFluentUI.BFUButton.dll",
+        "staticwebassets/BlazorFluentUI.BFUButton.bundle.scp.css"
+      ]
+    },
     "BlazorFluentUI.BFUCallout/4.0.2": {
       "sha512": "JN8nrjIEbf04gXTpIVfKBPQnCRF+Ojo21TcknmYXOfxwaoEKCBeoqp1hJ1IW2qM81av3N4CQESk2a0LjeITzow==",
       "type": "package",
@@ -1701,6 +1913,26 @@
         "lib/net5.0/BlazorFluentUI.BFUComponentStyle.dll"
       ]
     },
+    "BlazorFluentUI.BFUContextualMenu/4.0.2": {
+      "sha512": "R5zfc4lQfVcGYhqz3xio9ieOJH1y2pgpf8xptSZ7rELcZLPnLYqLZr7bmU4YkqdJZAp8CYozbxZwoTfZRqGzzQ==",
+      "type": "package",
+      "path": "blazorfluentui.bfucontextualmenu/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "blazorfluentui.bfucontextualmenu.4.0.2.nupkg.sha512",
+        "blazorfluentui.bfucontextualmenu.nuspec",
+        "build/BlazorFluentUI.BFUContextualMenu.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/BlazorFluentUI.BFUContextualMenu.props",
+        "buildTransitive/BlazorFluentUI.BFUContextualMenu.props",
+        "lib/net5.0/BlazorFluentUI.BFUContextualMenu.dll",
+        "staticwebassets/BlazorFluentUI.BFUContextualMenu.bundle.scp.css",
+        "staticwebassets/contextualMenu.js",
+        "staticwebassets/contextualMenu.js.map"
+      ]
+    },
     "BlazorFluentUI.BFUDelayedRender/4.0.2": {
       "sha512": "3tv0sjd6jiMZk/afVL53MlTqMA16NSXL0fCLMXlpz1PPSgnszM/h69kHHL5LgRsAuIlA+dYdNe6EUFgEiZTozw==",
       "type": "package",
@@ -1712,6 +1944,26 @@
         "blazorfluentui.bfudelayedrender.4.0.2.nupkg.sha512",
         "blazorfluentui.bfudelayedrender.nuspec",
         "lib/net5.0/BlazorFluentUI.BFUDelayedRender.dll"
+      ]
+    },
+    "BlazorFluentUI.BFUFocusZone/4.0.2": {
+      "sha512": "c3xJXoAfnn3eQV8ijbE4ZpaqcGWITB4QRNjkC7WOtTqHxs6gqNAW/ODrTjJVUa3UZCJwJNUI9VsJ/5OFvOv/IQ==",
+      "type": "package",
+      "path": "blazorfluentui.bfufocuszone/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "blazorfluentui.bfufocuszone.4.0.2.nupkg.sha512",
+        "blazorfluentui.bfufocuszone.nuspec",
+        "build/BlazorFluentUI.BFUFocusZone.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/BlazorFluentUI.BFUFocusZone.props",
+        "buildTransitive/BlazorFluentUI.BFUFocusZone.props",
+        "lib/net5.0/BlazorFluentUI.BFUFocusZone.dll",
+        "staticwebassets/BlazorFluentUI.BFUFocusZone.bundle.scp.css",
+        "staticwebassets/focusZone.js",
+        "staticwebassets/focusZone.js.map"
       ]
     },
     "BlazorFluentUI.BFUIcon/4.0.2": {
@@ -1792,6 +2044,37 @@
         "blazorfluentui.bfupopup.4.0.2.nupkg.sha512",
         "blazorfluentui.bfupopup.nuspec",
         "lib/net5.0/BlazorFluentUI.BFUPopup.dll"
+      ]
+    },
+    "BlazorFluentUI.BFUResponsiveLayout/4.0.2": {
+      "sha512": "Cx5E+BJ0VerxqFqXVVZdlSmtJCMujzflWED3qapuHKFsrOiTbWwx7adcOLYGCUJx22fqAbULqGLUCHbQyfHobg==",
+      "type": "package",
+      "path": "blazorfluentui.bfuresponsivelayout/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "blazorfluentui.bfuresponsivelayout.4.0.2.nupkg.sha512",
+        "blazorfluentui.bfuresponsivelayout.nuspec",
+        "lib/net5.0/BlazorFluentUI.BFUResponsiveLayout.dll"
+      ]
+    },
+    "BlazorFluentUI.BFUSlider/4.0.2": {
+      "sha512": "yS8Hqt2oywiZcer/50E9r5IP0y6eqnkagw2EtF7EflcP9nJBVZ5SydZzajHNp4Ph5uddo/V7oU2+VzpKPIUfLg==",
+      "type": "package",
+      "path": "blazorfluentui.bfuslider/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "blazorfluentui.bfuslider.4.0.2.nupkg.sha512",
+        "blazorfluentui.bfuslider.nuspec",
+        "build/BlazorFluentUI.BFUSlider.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/BlazorFluentUI.BFUSlider.props",
+        "buildTransitive/BlazorFluentUI.BFUSlider.props",
+        "lib/net5.0/BlazorFluentUI.BFUSlider.dll",
+        "staticwebassets/BlazorFluentUI.BFUSlider.bundle.scp.css"
       ]
     },
     "BlazorFluentUI.BFUTextField/4.0.2": {
@@ -3162,6 +3445,8 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "BlazorFluentUI.BFUButton >= 4.0.2",
+      "BlazorFluentUI.BFUSlider >= 4.0.2",
       "BlazorFluentUI.BFUTextField >= 4.0.2",
       "BlazorFluentUI.BFUTheme >= 4.0.2",
       "BlazorFluentUI.BFUToggle >= 4.0.2",
@@ -3212,6 +3497,14 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "BlazorFluentUI.BFUButton": {
+            "target": "Package",
+            "version": "[4.0.2, )"
+          },
+          "BlazorFluentUI.BFUSlider": {
+            "target": "Package",
+            "version": "[4.0.2, )"
+          },
           "BlazorFluentUI.BFUTextField": {
             "target": "Package",
             "version": "[4.0.2, )"

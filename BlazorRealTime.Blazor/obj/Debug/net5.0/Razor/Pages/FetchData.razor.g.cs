@@ -79,6 +79,13 @@ using BlazorRealTime.Blazor.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\_Imports.razor"
+using BlazorFluentUI;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
     public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
     {

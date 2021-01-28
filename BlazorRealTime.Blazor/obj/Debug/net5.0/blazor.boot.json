@@ -8,14 +8,19 @@
   "resources": {
     "assembly": {
       "BlazorFluentUI.BFUBaseComponent.dll": "sha256-VbmOtDNGVtzPk\/7F0udWMuFCsJrBQ4TWCp8tQeWzQ3U=",
+      "BlazorFluentUI.BFUButton.dll": "sha256-4DebWfsG7kPp7CV4Gdw7zNMesVERr2ZRQPqGo1Oh4bo=",
       "BlazorFluentUI.BFUCallout.dll": "sha256-pww\/ZARoqqYiNk5DnXJ7vjsxU19I3cRje4R3CbyjVTg=",
       "BlazorFluentUI.BFUComponentStyle.dll": "sha256-DEfiFHdSIfuBsiiXQPASo1LFDfgibz2MyUWVyyQCWws=",
+      "BlazorFluentUI.BFUContextualMenu.dll": "sha256-GlU+TqxmHoRlTyLxRMIFOna4x6TnldjHpEJmTd6XeW4=",
       "BlazorFluentUI.BFUDelayedRender.dll": "sha256-cjDAA73ZGHQmrzJs2obY9sWguLgxxJFB9I3wQIt\/4dg=",
+      "BlazorFluentUI.BFUFocusZone.dll": "sha256-l9dSgw346Cbi1wdtcNKJ7THqxX1j2SJ9AaShICt8oJc=",
       "BlazorFluentUI.BFUIcon.dll": "sha256-ehYXn0TY\/dH1o4qjtmLByHeHKtqFvIK6eWdgDEnZMIk=",
       "BlazorFluentUI.BFUKeytip.dll": "sha256-m01Yu8cg49tPJB3pTF315Ene4GhXYb6\/5p6\/Ryn6nDs=",
       "BlazorFluentUI.BFULabel.dll": "sha256-LV8ZD9yV8vPyNGamsx1e04hwyaSnW0qcingPFjeOlr8=",
       "BlazorFluentUI.BFULayer.dll": "sha256-emRqswvSfpXXfPFWev5RYLQlOzPEi7y8rREYx4KT2iw=",
       "BlazorFluentUI.BFUPopup.dll": "sha256-oSgHso9cr1DnPli6YiZMW6MrEH3fQrr93T24YbKYhDI=",
+      "BlazorFluentUI.BFUResponsiveLayout.dll": "sha256-XtgZBZugOwEr169fK9Vmyt5vL7wCiJUnXlginD25oAU=",
+      "BlazorFluentUI.BFUSlider.dll": "sha256-cqsIhoqSY8jyo57amsBcLE3W7Cax+TspEMhgHUu+rpA=",
       "BlazorFluentUI.BFUTextField.dll": "sha256-u6cM9K\/\/7KVzfzYMCBpDlApxiR\/uh8c9e4NfcWAByQ0=",
       "BlazorFluentUI.BFUTheme.dll": "sha256-NeSC73je6DzNChzW6LbabER7Uw2I+wdU11XalLaA5Kc=",
       "BlazorFluentUI.BFUToggle.dll": "sha256-TWdxP0WMVliL+n5uS\/wVn9Vj43xK\/OfQQOH7GzyJrRM=",
@@ -226,11 +231,11 @@
       "mscorlib.dll": "sha256-pfURHvguun0aGHBikgqj1tcIC9yVwDja+omBjH9K0WU=",
       "netstandard.dll": "sha256-zDt6ZaAbtKh1rxzQ7CMtlli234CuRfzZU6Fe9cc2FG4=",
       "System.Private.CoreLib.dll": "sha256-KRDEW\/5qbC0\/9M5IbDGIAM1sKCutWHyq9oLl8WW0c3I=",
-      "BlazorRealTime.Blazor.dll": "sha256-YQM5I\/7DSRX6nw2to4onMiJcb34Gov5D7btgnjpCyiE="
+      "BlazorRealTime.Blazor.dll": "sha256-1sSLftnidcjQ4x+2gjCfpt2XZ1MoN7XoiGfdvVOZlu8="
     },
     "lazyAssembly": null,
     "pdb": {
-      "BlazorRealTime.Blazor.pdb": "sha256-YyVwhptzE5FsMxO3W7EOZ7wUFHvj9WuBj5BaSmwrN4c="
+      "BlazorRealTime.Blazor.pdb": "sha256-jzJs6OetalmFh8kj\/gahd\/ROzEGbvmwJaf1IMHnQgfE="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-\/mwFhTTF4Kca8PG7G6rxaGqCueWH9XbWEIK1Fm8GbFg=",

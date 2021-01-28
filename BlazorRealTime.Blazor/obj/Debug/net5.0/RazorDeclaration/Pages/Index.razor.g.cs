@@ -112,14 +112,32 @@ using BlazorFluentUI;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 72 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\Index.razor"
+#line 63 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\Index.razor"
        
-    string url = "https://localhost:44393/notificationhub";
+    [Inject]
+    public ThemeProvider ThemeProvider { get; set; }
+    ITheme Theme => ThemeProvider?.Theme;
+    static System.Diagnostics.Stopwatch sw = null;
 
+    static int tid() { return System.Threading.Thread.CurrentThread.ManagedThreadId; }
+    protected override void OnInitialized()
+    {
+        var palette = new DefaultPaletteDark();
+        ThemeProvider.UpdateTheme(palette, new DefaultSemanticColorsDark(palette), new DefaultSemanticTextColorsDark(palette));
+
+        base.OnInitialized();
+    }
+    string url = "https://localhost:44393/notificationhub";
+    public static string limit = "";
+    public static double controlledValue = 0;
+    public static double controlledMutation = 0;
+    public static string monkeys = "";
     HubConnection _connection = null;
     bool isConnected = false;
     string connectionStatus = "Closed";
     private bool? BoundChecked = false;
+    bool? Checked;
+    bool? Disabled;
 
     public static List<TopRequest> notifications = new List<TopRequest>();
 
@@ -150,7 +168,7 @@ using BlazorFluentUI;
 
     public static List<string> messages = new List<string>();
     public static int monkeysInput;
-    public static string messageInput;
+    public static string messageInput = "";
     public static bool parallelInput;
     public static int crossoverInput;
     public static int mutationInput;
@@ -160,10 +178,15 @@ using BlazorFluentUI;
     private async Task Send()
     {
         notifications.Clear();
+        mutationInput = Convert.ToInt32(controlledMutation);
+        crossoverInput = Convert.ToInt32(controlledValue);
+        monkeysInput = Convert.ToInt32(monkeys);
+        limitInput = Convert.ToInt32(limit);
         TargetRequest areq = new TargetRequest { id = 44393, parallel = parallelInput, target = messageInput };
         alength = string.IsNullOrEmpty(messageInput) ? 1 : messageInput.Length;
         TryRequest treq = new TryRequest { id = 44393, parallel = parallelInput, monkeys = monkeysInput, length = alength, crossover = crossoverInput, mutation = mutationInput, limit = limitInput };
-
+        sw = new System.Diagnostics.Stopwatch();
+        sw.Start();
         PostTarget(areq);
         PostTry(treq);
         //await Http.PostAsJsonAsync("http://localhost:8091/", areq);
@@ -178,9 +201,6 @@ using BlazorFluentUI;
         client.DefaultRequestHeaders.Accept.Clear();
         client.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/json"));
-        //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(""));
-        //client.DefaultRequestHeaders.Accept.Add("Access-Control-Allow-Origin", "*");
-        //WriteLine($"[{tid()}] ... POST /target send {t}");
         var hrm = await client.PostAsJsonAsync("/target", t);
         hrm.EnsureSuccessStatusCode();
         return;

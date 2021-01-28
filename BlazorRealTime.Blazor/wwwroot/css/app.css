@@ -1,12 +1,32 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+<link rel="preconnect" href="https://fonts.gstatic.com" >
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet" >
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: rgba(255,255,255,0.25);
+    color: rgb(255,255,255);
 }
 
 a, .btn-link {
     color: #0366d6;
+}
+
+.buttons {
+    padding-top:15px;
+}
+
+.Form {
+    width:50%;
+    float:left;
+}
+
+.explaination {
+    width:48%;
+    float:right;
+}
+
+.form-group {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .btn-primary {

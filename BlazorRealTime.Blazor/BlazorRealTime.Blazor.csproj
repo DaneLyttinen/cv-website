@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BlazorFluentUI.BFUButton" Version="4.0.2" />
+    <PackageReference Include="BlazorFluentUI.BFUSlider" Version="4.0.2" />
     <PackageReference Include="BlazorFluentUI.BFUTextField" Version="4.0.2" />
     <PackageReference Include="BlazorFluentUI.BFUTheme" Version="4.0.2" />
     <PackageReference Include="BlazorFluentUI.BFUToggle" Version="4.0.2" />

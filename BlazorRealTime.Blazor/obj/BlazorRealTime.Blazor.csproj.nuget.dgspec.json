@@ -40,6 +40,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "BlazorFluentUI.BFUButton": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "BlazorFluentUI.BFUSlider": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
             "BlazorFluentUI.BFUTextField": {
               "target": "Package",
               "version": "[4.0.2, )"
