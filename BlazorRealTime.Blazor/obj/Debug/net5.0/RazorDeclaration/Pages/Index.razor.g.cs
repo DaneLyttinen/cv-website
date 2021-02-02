@@ -13,6 +13,13 @@ namespace BlazorRealTime.Blazor.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
+#line 1 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\_Imports.razor"
+using System.Net.Http;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\_Imports.razor"
 using System.Net.Http.Json;
 
@@ -76,28 +83,7 @@ using BlazorRealTime.Blazor.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\Index.razor"
-using Microsoft.AspNetCore.SignalR.Client;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 3 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\Index.razor"
-using System.Net.Http;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 5 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\Index.razor"
-using System.Net.Http.Headers;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 6 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\Index.razor"
+#line 11 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\_Imports.razor"
 using BlazorFluentUI;
 
 #line default
@@ -112,157 +98,23 @@ using BlazorFluentUI;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 63 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\Index.razor"
+#line 17 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\Index.razor"
        
-    [Inject]
-    public ThemeProvider ThemeProvider { get; set; }
-    ITheme Theme => ThemeProvider?.Theme;
-    static System.Diagnostics.Stopwatch sw = null;
 
-    static int tid() { return System.Threading.Thread.CurrentThread.ManagedThreadId; }
-    protected override void OnInitialized()
+    void redirectURL()
     {
-        var palette = new DefaultPaletteDark();
-        ThemeProvider.UpdateTheme(palette, new DefaultSemanticColorsDark(palette), new DefaultSemanticTextColorsDark(palette));
-
-        base.OnInitialized();
-    }
-    string url = "https://localhost:44393/notificationhub";
-    public static string limit = "";
-    public static double controlledValue = 0;
-    public static double controlledMutation = 0;
-    public static string monkeys = "";
-    HubConnection _connection = null;
-    bool isConnected = false;
-    string connectionStatus = "Closed";
-    private bool? BoundChecked = false;
-    bool? Checked;
-    bool? Disabled;
-
-    public static List<TopRequest> notifications = new List<TopRequest>();
-
-    private async Task ConnectToServer()
-    {
-        _connection = new HubConnectionBuilder()
-            .WithUrl(url)
-            .Build();
-
-        await _connection.StartAsync();
-        isConnected = true;
-        connectionStatus = "Connected :-)";
-
-        _connection.Closed += async (s) =>
-        {
-            isConnected = false;
-            connectionStatus = "Disconnected";
-            await _connection.StartAsync();
-            isConnected = true;
-        };
-
-        _connection.On<TopRequest>("notification", m =>
-        {
-            notifications.Add(m);
-            StateHasChanged();
-        });
+        NavManager.NavigateTo("/portfolio");
     }
 
-    public static List<string> messages = new List<string>();
-    public static int monkeysInput;
-    public static string messageInput = "";
-    public static bool parallelInput;
-    public static int crossoverInput;
-    public static int mutationInput;
-    public static int alength;
-    public static int limitInput;
-
-    private async Task Send()
+    void redirectAbout()
     {
-        notifications.Clear();
-        mutationInput = Convert.ToInt32(controlledMutation);
-        crossoverInput = Convert.ToInt32(controlledValue);
-        monkeysInput = Convert.ToInt32(monkeys);
-        limitInput = Convert.ToInt32(limit);
-        TargetRequest areq = new TargetRequest { id = 44393, parallel = parallelInput, target = messageInput };
-        alength = string.IsNullOrEmpty(messageInput) ? 1 : messageInput.Length;
-        TryRequest treq = new TryRequest { id = 44393, parallel = parallelInput, monkeys = monkeysInput, length = alength, crossover = crossoverInput, mutation = mutationInput, limit = limitInput };
-        sw = new System.Diagnostics.Stopwatch();
-        sw.Start();
-        PostTarget(areq);
-        PostTry(treq);
-        //await Http.PostAsJsonAsync("http://localhost:8091/", areq);
-        //await Http.PostAsJsonAsync("https://localhost:44393/api/notifications?treq=", treq);
-    }
-
-    public static async void PostTarget(TargetRequest t)
-    {
-        var client = new HttpClient();
-
-        client.BaseAddress = new Uri("http://localhost:8091/");
-        client.DefaultRequestHeaders.Accept.Clear();
-        client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));
-        var hrm = await client.PostAsJsonAsync("/target", t);
-        hrm.EnsureSuccessStatusCode();
-        return;
-    }
-
-    public static async void PostTry(TryRequest t)
-    {
-        var client = new HttpClient();
-
-        client.BaseAddress = new Uri("http://localhost:8081/");
-        client.DefaultRequestHeaders.Accept.Clear();
-        client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));
-
-        //WriteLine($"[{tid()}] ... POST /try send {t}");
-        var hrm = await client.PostAsJsonAsync("/try", t);
-        hrm.EnsureSuccessStatusCode();
-        return;
-    }
-
-    public class TargetRequest
-    {
-        public int id { get; set; }
-        public bool parallel { get; set; }
-        public string target { get; set; }
-        public override string ToString()
-        {
-            return $"{{{id}, {parallel}, \"{target}\"}}";
-        }
-    }
-
-    public class TryRequest
-    {
-        public int id { get; set; }
-        public bool parallel { get; set; }
-        public int monkeys { get; set; }
-        public int length { get; set; }
-        public int crossover { get; set; }
-        public int mutation { get; set; }
-        public int limit { get; set; }
-        public override string ToString()
-        {
-            return $"{{{id}, {parallel}, {monkeys}, {length}, {crossover}, {mutation}, {limit}}}";
-        }
-    }
-
-    public class TopRequest
-    {
-        public int id { get; set; }
-        public int loop { get; set; }
-        public int score { get; set; }
-        public string genome { get; set; }
-        public override string ToString()
-        {
-            return $"{{{id}, {loop}, {score}, {genome}}}";
-        }
+        NavManager.NavigateTo("/about");
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
     }
 }
 #pragma warning restore 1591

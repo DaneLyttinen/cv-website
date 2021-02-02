@@ -89,6 +89,7 @@ using BlazorFluentUI;
 #line default
 #line hidden
 #nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Home : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -96,6 +97,24 @@ using BlazorFluentUI;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 17 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\Home.razor"
+       
+
+    void redirectURL()
+    {
+        NavManager.NavigateTo("/portfolio");
+    }
+
+    void redirectAbout()
+    {
+        NavManager.NavigateTo("/about");
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
     }
 }
 #pragma warning restore 1591

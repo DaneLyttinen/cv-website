@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zvgJVbvTbstbukStXiamOtPKy1hm5eZzqicYG6wxwEc0Dzq3nUiMq2k4aan6qzHGI+IdKNWy+6zjmp2spDDV6Q==",
+  "dgSpecHash": "n17niJr7FHo5vfgiU5A4OMONFIgmg5juHKpGPGbMjZr7IX3uNtu7fMW6k9KvPyhAioUHh0184FZlGZjtesZ2GQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dane\\source\\repos\\BlazorRealTime\\BlazorRealTime.Blazor\\BlazorRealTime.Blazor.csproj",
   "expectedPackageFiles": [
@@ -10,11 +10,15 @@
     "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfucomponentstyle\\4.0.2\\blazorfluentui.bfucomponentstyle.4.0.2.nupkg.sha512",
     "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfucontextualmenu\\4.0.2\\blazorfluentui.bfucontextualmenu.4.0.2.nupkg.sha512",
     "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfudelayedrender\\4.0.2\\blazorfluentui.bfudelayedrender.4.0.2.nupkg.sha512",
+    "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfufocustrapzone\\4.0.2\\blazorfluentui.bfufocustrapzone.4.0.2.nupkg.sha512",
     "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfufocuszone\\4.0.2\\blazorfluentui.bfufocuszone.4.0.2.nupkg.sha512",
     "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfuicon\\4.0.2\\blazorfluentui.bfuicon.4.0.2.nupkg.sha512",
     "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfukeytip\\4.0.2\\blazorfluentui.bfukeytip.4.0.2.nupkg.sha512",
     "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfulabel\\4.0.2\\blazorfluentui.bfulabel.4.0.2.nupkg.sha512",
     "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfulayer\\4.0.2\\blazorfluentui.bfulayer.4.0.2.nupkg.sha512",
+    "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfumessagebar\\4.0.2\\blazorfluentui.bfumessagebar.4.0.2.nupkg.sha512",
+    "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfuoverlay\\4.0.2\\blazorfluentui.bfuoverlay.4.0.2.nupkg.sha512",
+    "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfupanel\\4.0.2\\blazorfluentui.bfupanel.4.0.2.nupkg.sha512",
     "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfupopup\\4.0.2\\blazorfluentui.bfupopup.4.0.2.nupkg.sha512",
     "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfuresponsivelayout\\4.0.2\\blazorfluentui.bfuresponsivelayout.4.0.2.nupkg.sha512",
     "C:\\Users\\Dane\\.nuget\\packages\\blazorfluentui.bfuslider\\4.0.2\\blazorfluentui.bfuslider.4.0.2.nupkg.sha512",

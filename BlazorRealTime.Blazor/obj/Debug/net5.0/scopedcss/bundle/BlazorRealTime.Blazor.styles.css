@@ -5,6 +5,9 @@
 @import '_content/BlazorFluentUI.BFUIcon/BlazorFluentUI.BFUIcon.bundle.scp.css';
 @import '_content/BlazorFluentUI.BFULabel/BlazorFluentUI.BFULabel.bundle.scp.css';
 @import '_content/BlazorFluentUI.BFULayer/BlazorFluentUI.BFULayer.bundle.scp.css';
+@import '_content/BlazorFluentUI.BFUMessageBar/BlazorFluentUI.BFUMessageBar.bundle.scp.css';
+@import '_content/BlazorFluentUI.BFUOverlay/BlazorFluentUI.BFUOverlay.bundle.scp.css';
+@import '_content/BlazorFluentUI.BFUPanel/BlazorFluentUI.BFUPanel.bundle.scp.css';
 @import '_content/BlazorFluentUI.BFUSlider/BlazorFluentUI.BFUSlider.bundle.scp.css';
 @import '_content/BlazorFluentUI.BFUTextField/BlazorFluentUI.BFUTextField.bundle.scp.css';
 @import '_content/BlazorFluentUI.BFUToggle/BlazorFluentUI.BFUToggle.bundle.scp.css';
@@ -86,6 +89,12 @@
 /* /Shared/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-m1xesxgkuh] {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar[b-m1xesxgkuh] {
+    border-right: 0.1px #333333;
+    border-right-style: none;
+    border-style: none solid none none;
 }
 
 .top-row[b-m1xesxgkuh] {

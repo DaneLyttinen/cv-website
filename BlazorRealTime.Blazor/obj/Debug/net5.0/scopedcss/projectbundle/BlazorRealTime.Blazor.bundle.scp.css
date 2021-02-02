@@ -79,6 +79,12 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+.sidebar[b-m1xesxgkuh] {
+    border-right: 0.1px #333333;
+    border-right-style: none;
+    border-style: none solid none none;
+}
+
 .top-row[b-m1xesxgkuh] {
     height: 15rem;
     background-color: rgba(0,0,0,0.4);

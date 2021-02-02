@@ -1,55 +1,107 @@
-﻿@page "/fetchdata"
-@inject HttpClient Http
+﻿@page "/about"
 
-<h1>Weather forecast</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<h1>About Me</h1>
 
-@if (forecasts == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+
+<BFULayerHost style="height: 500px;
+        width: 70%;
+        border: 1px solid #555555;
+        position: relative;
+        overflow: hidden;">
+    <div style="@myStyle">
+        <h3>Personal</h3>
+        <p class="Personal">
+            I was born In Sweden of which I lived in for 12 years until me and my family moved to
+            Christchurch, New Zealand in 2013. The original plan was to move to Auckland at first
+            but my father got a job in Christchurch so we stayed put there for 2 years. Afterwards
+            we moved to Auckland but the rest of my family wanted to move to Australia though
+            I wanted to stay in Auckland since I got accepted into The University Of Auckland.
+            So I've been staying here, in Auckland, flatting with friends since 2018 when I first started University!
+        </p>
+
+        <p>My hobbies are bodybuilding, coding and stock market trading.<br /> I've been keeping a schedule
+            to stay fit and actively go to the gym whenever I have free time as I was heavily
+            influenced by my uncle at a young age to frequently go the gym as he had done for 40 years.
+            <br /><br />
+            I've been coding since year 11 at high school, mainly in puthon and found it to be one of my passions.
+            Since then I've pursued a bachelor of Computer Science at The University Of Auckland and always giving
+            every university project my utmost effort. Since I have completed quite a few comp sci courses
+            I have pursued some personal projects of my own in a wide variety of languages, and I try to learn
+            new frameworks and how to improve my efficiency of code in my free time.
+            <br /><br />
+            I've been interested in the stock market for quite a long time but it sparked my peak interest during
+            the covid market crash in March, where I saw an opportunity to enter the market and put some of my savings into
+            different tech stocks as they kept going down. Since then I have grown my stock portfolio as much as I can and
+            been investing in companies I believe in. Reading about the stock market and different ways to approach it has been
+            a recent interest of mine as well.
+            <br /><br />
+            Oh and I fancy playing some video games sometimes when I find some spare time to do so.
+        </p>
+    </div>
+    <div style="@styleUni">
+        <h3>Education</h3>
+        <p>I have been studying at The University of Auckland since 2018 to get my bachelor
+            majoring in Computer Science where I'm expected to graduate at the end of 2021.
+        </p>
+        <p>
+            Studying Computer Science at university has opened up my eye to the wide range of different fields
+            and topics in computer science I didn't know existed. Since I started, my passion for coding has 
+            grown and I want to learn as much as I can to solve everyday problems and make life easier for anyone
+            be it through automation, some algorithm or other. I have found greedy algorithms like Djikstra's and the
+            overall study of algorithms the most interesting but I have found that I exceled at Web Development and software
+            development and I have found the classes involving such projects the most fun.
+        </p>
+        <p>At the moment I am taking a course studying the fundamentals of database systems and how you would
+            build a effective and efficient database application and how to maintain consistency. Another is
+            building large scale software, the issues associated with them and how to solve them. The last comp sci course is
+            in data communications and security which I am very interested in studying.</p>
+        <p>My favourite class I have taken must be the Fucntional programming and Distributed services class I took last semester of 2020.
+            It involved creating multiple websites utilizing API's to display data dynamically in javascript and securing your websites
+            through pen-testing. Later on in the semester we moved onto c# and more functional programming which taught me a lot more
+            of how to write efficient code and functions I didn't know existed such a memoization</p>
+        <p>At the moment I am not exactly sure in what field of Compuuter Science I want to pursue but cyber security, web development
+            and overall software development involving all different fields in software development have been the most interesting to me
+            for the moment.</p>
+    </div>
+</BFULayerHost>
+<div class="open-buttons">
+    <BFUPrimaryButton Text="Open Personal"
+                      OnClick=@(()=>
+                            {
+                                panelIsOpen = true;
+                                styleMethod();
+
+                            }) />
+    <BFUPrimaryButton Text="Open Education"
+                      OnClick=@(()=>
+                            {
+                                panelIsOpen = false;
+                                styleMethod();
+                            }) />
+</div>
 
 @code {
-    private WeatherForecast[] forecasts;
+    [CascadingParameter(Name = "Theme")]
+    public ITheme Theme { get; set; }
+    string styleUni = "display:none;";
+    string myStyle;
+    bool panelIsOpen = false;
+    bool? trapPanel = false;
 
-    protected override async Task OnInitializedAsync()
+    void styleMethod()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
-    }
+        if (panelIsOpen == true)
+        {
+            styleUni = "display: none;";
+            myStyle = "display: block;";
 
-    public class WeatherForecast
-    {
-        public DateTime Date { get; set; }
+        }
+        else
+        {
+            myStyle = "display: none;";
+            styleUni = "display:block;";
+        }
 
-        public int TemperatureC { get; set; }
-
-        public string Summary { get; set; }
-
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
     }
 }

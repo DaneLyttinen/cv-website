@@ -44,6 +44,18 @@
               "target": "Package",
               "version": "[4.0.2, )"
             },
+            "BlazorFluentUI.BFULayer": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "BlazorFluentUI.BFUMessageBar": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "BlazorFluentUI.BFUPanel": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
             "BlazorFluentUI.BFUSlider": {
               "target": "Package",
               "version": "[4.0.2, )"

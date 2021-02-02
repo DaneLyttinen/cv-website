@@ -97,7 +97,7 @@ using BlazorFluentUI;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 29 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Shared\NavMenu.razor"
+#line 34 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

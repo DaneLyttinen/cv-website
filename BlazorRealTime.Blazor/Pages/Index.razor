@@ -1,208 +1,28 @@
 ﻿@page "/"
-@using Microsoft.AspNetCore.SignalR.Client
-@using System.Net.Http
-@inject HttpClient Http
-@using System.Net.Http.Headers
-@using BlazorFluentUI
-
-<h1>Welcome to SignalR with Blazor</h1>
-<div class="Form">
-    <BFUTextField Label="Number of monkeys" @bind-Value=@monkeys @bind-Value:event="OnInput" Placeholder="Enter a integer" />
-    <BFUTextField Label="Message" @bind-Value=@messageInput @bind-Value:event="OnInput" Placeholder="Enter a string"/>
-    <BFUToggle @bind-Checked=@parallelInput OnText="True!" OffText="False!" Label="Run the algorithm in parallel(True) or sequential(False)." />
-    <BFUSlider Label="Crossover"
-               @bind-Value=controlledValue
-               Min="0"
-               Max="100"
-               ShowValue="true" />
-
-    <BFUSlider Label="Mutation"
-               @bind-Value=controlledMutation
-               Min="0"
-               Max="100"
-               ShowValue="true" />
-    <BFUTextField Label="loop limit" @bind-Value=@limit @bind-Value:event="OnInput" Placeholder="Enter a integer" />
-    <div class="buttons">
-        <button @onclick="Send" type="button" class="btn btn-primary">Send</button>
-        <button class="btn btn-success" @onclick="async () => await ConnectToServer()" disabled="@isConnected">Connect</button>
-        <button type="button" class="btn btn-info" @onclick='async () => messageInput = "To be or not to be, that is the question"'>Info</button>
-    </div>
-    <h3>Connection Status: @connectionStatus</h3>
-</div>
-<div class="explaination">
-    <p>
-        "The infinite monkey theorem states that a monkey hitting keys at random on a typewriter keyboard for an infinite amount of time will almost surely type any given text,
-        such as the complete works of William Shakespeare"
+@inject NavigationManager NavManager
+<div class="Center">
+    <h1 id="title">HELLO,</h1>
+    <p id="intro">
+        My name's Dane and I am a upcoming computer science graduate, I enjoy coding in my free time and trying out new languages and frameworks.
+        I've got experience in a wide variety of different languages mainly in python, I enjoy web development and software development the most!
     </p>
-    <h3> So I created a genetic algorithm to try this theorem out using C#!</h3>
-    <p> The number of monkeys will decide on how many randomly generated string genomes will be created on each iteration of the genetic algorithm,
-        the more the merrier.</p>
-    <p>The message is the string that you want the genetic algorithm to try and figure out through different generations of strings.</p>
-    <p>If you want to run the genetic algorithm in parallel you can (hopefully) see a big change in the utilization of the CPU of which the genetic algorithm is running on.
-        Which means the algorithm would execute much much faster.</p>
-    <p> The crossover probability will decide that a pair of parents will cross over their genomes while generating a pair of children. Otherwise the children are identical to their parents.
-        So the higher the probability the easier you make it for the algorithm to guess the message</p>
-    <p>The mutation slider will decide on the probability that a newly generated child will suffer one randomized mutation by changing one random string in that genome.</p>
-    <p> the loop limit will set a limit on the number of iterations allowed on the genetic algorithm, if the limit is reached the algorithm will stop even if it hasn't calculated the right string</p>
+
+    <button class="portfolio btn" @onclick='redirectURL'>
+        PORTFOLIO
+    </button>
+    <button class="btn btn-outline-light" @onclick="redirectAbout"> ABOUT ME</button>
+
 </div>
-
-
-<ul id="messagesList">
-    @foreach (var item in notifications)
-    {
-        <li>Number of   Loops: @item.loop, Genome Score: @item.score, Genome string: @item.genome</li>
-        if (item.score == 0)
-        {
-            sw.Stop();
-            var ms = sw.ElapsedMilliseconds;
-            <li>loops: {@item.loop}, millis: {@ms}"</li>
-        }
-    }
-</ul>
 
 @code {
-    [Inject]
-    public ThemeProvider ThemeProvider { get; set; }
-    ITheme Theme => ThemeProvider?.Theme;
-    static System.Diagnostics.Stopwatch sw = null;
 
-    static int tid() { return System.Threading.Thread.CurrentThread.ManagedThreadId; }
-    protected override void OnInitialized()
+    void redirectURL()
     {
-        var palette = new DefaultPaletteDark();
-        ThemeProvider.UpdateTheme(palette, new DefaultSemanticColorsDark(palette), new DefaultSemanticTextColorsDark(palette));
-
-        base.OnInitialized();
-    }
-    string url = "https://localhost:44393/notificationhub";
-    public static string limit = "";
-    public static double controlledValue = 0;
-    public static double controlledMutation = 0;
-    public static string monkeys = "";
-    HubConnection _connection = null;
-    bool isConnected = false;
-    string connectionStatus = "Closed";
-    private bool? BoundChecked = false;
-    bool? Checked;
-    bool? Disabled;
-
-    public static List<TopRequest> notifications = new List<TopRequest>();
-
-    private async Task ConnectToServer()
-    {
-        _connection = new HubConnectionBuilder()
-            .WithUrl(url)
-            .Build();
-
-        await _connection.StartAsync();
-        isConnected = true;
-        connectionStatus = "Connected :-)";
-
-        _connection.Closed += async (s) =>
-        {
-            isConnected = false;
-            connectionStatus = "Disconnected";
-            await _connection.StartAsync();
-            isConnected = true;
-        };
-
-        _connection.On<TopRequest>("notification", m =>
-        {
-            notifications.Add(m);
-            StateHasChanged();
-        });
+        NavManager.NavigateTo("/portfolio");
     }
 
-    public static List<string> messages = new List<string>();
-    public static int monkeysInput;
-    public static string messageInput = "";
-    public static bool parallelInput;
-    public static int crossoverInput;
-    public static int mutationInput;
-    public static int alength;
-    public static int limitInput;
-
-    private async Task Send()
+    void redirectAbout()
     {
-        notifications.Clear();
-        mutationInput = Convert.ToInt32(controlledMutation);
-        crossoverInput = Convert.ToInt32(controlledValue);
-        monkeysInput = Convert.ToInt32(monkeys);
-        limitInput = Convert.ToInt32(limit);
-        TargetRequest areq = new TargetRequest { id = 44393, parallel = parallelInput, target = messageInput };
-        alength = string.IsNullOrEmpty(messageInput) ? 1 : messageInput.Length;
-        TryRequest treq = new TryRequest { id = 44393, parallel = parallelInput, monkeys = monkeysInput, length = alength, crossover = crossoverInput, mutation = mutationInput, limit = limitInput };
-        sw = new System.Diagnostics.Stopwatch();
-        sw.Start();
-        PostTarget(areq);
-        PostTry(treq);
-        //await Http.PostAsJsonAsync("http://localhost:8091/", areq);
-        //await Http.PostAsJsonAsync("https://localhost:44393/api/notifications?treq=", treq);
-    }
-
-    public static async void PostTarget(TargetRequest t)
-    {
-        var client = new HttpClient();
-
-        client.BaseAddress = new Uri("http://localhost:8091/");
-        client.DefaultRequestHeaders.Accept.Clear();
-        client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));
-        var hrm = await client.PostAsJsonAsync("/target", t);
-        hrm.EnsureSuccessStatusCode();
-        return;
-    }
-
-    public static async void PostTry(TryRequest t)
-    {
-        var client = new HttpClient();
-
-        client.BaseAddress = new Uri("http://localhost:8081/");
-        client.DefaultRequestHeaders.Accept.Clear();
-        client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));
-
-        //WriteLine($"[{tid()}] ... POST /try send {t}");
-        var hrm = await client.PostAsJsonAsync("/try", t);
-        hrm.EnsureSuccessStatusCode();
-        return;
-    }
-
-    public class TargetRequest
-    {
-        public int id { get; set; }
-        public bool parallel { get; set; }
-        public string target { get; set; }
-        public override string ToString()
-        {
-            return $"{{{id}, {parallel}, \"{target}\"}}";
-        }
-    }
-
-    public class TryRequest
-    {
-        public int id { get; set; }
-        public bool parallel { get; set; }
-        public int monkeys { get; set; }
-        public int length { get; set; }
-        public int crossover { get; set; }
-        public int mutation { get; set; }
-        public int limit { get; set; }
-        public override string ToString()
-        {
-            return $"{{{id}, {parallel}, {monkeys}, {length}, {crossover}, {mutation}, {limit}}}";
-        }
-    }
-
-    public class TopRequest
-    {
-        public int id { get; set; }
-        public int loop { get; set; }
-        public int score { get; set; }
-        public string genome { get; set; }
-        public override string ToString()
-        {
-            return $"{{{id}, {loop}, {score}, {genome}}}";
-        }
+        NavManager.NavigateTo("/about");
     }
 }

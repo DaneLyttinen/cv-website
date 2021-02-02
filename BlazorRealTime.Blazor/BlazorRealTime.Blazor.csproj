@@ -5,7 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\Resumerazor.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BlazorFluentUI.BFUButton" Version="4.0.2" />
+    <PackageReference Include="BlazorFluentUI.BFULayer" Version="4.0.2" />
+    <PackageReference Include="BlazorFluentUI.BFUMessageBar" Version="4.0.2" />
+    <PackageReference Include="BlazorFluentUI.BFUPanel" Version="4.0.2" />
     <PackageReference Include="BlazorFluentUI.BFUSlider" Version="4.0.2" />
     <PackageReference Include="BlazorFluentUI.BFUTextField" Version="4.0.2" />
     <PackageReference Include="BlazorFluentUI.BFUTheme" Version="4.0.2" />
@@ -16,6 +23,18 @@
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="5.0.2" />
     <PackageReference Include="Syncfusion.Blazor" Version="18.4.0.35" />
     <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Resumerazor.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Resumerazor.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Resumerazor.razor" />
   </ItemGroup>
 
 </Project>
