@@ -1,0 +1,20 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\bin\Release\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFUBaseComponent" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfubasecomponent\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFUButton" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfubutton\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFUCallout" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfucallout\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFUContextualMenu" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfucontextualmenu\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFUFocusTrapZone" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfufocustrapzone\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFUFocusZone" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfufocuszone\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFUIcon" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfuicon\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFULabel" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfulabel\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFULayer" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfulayer\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFUMessageBar" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfumessagebar\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFUOverlay" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfuoverlay\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFUPanel" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfupanel\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFUSlider" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfuslider\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFUTextField" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfutextfield\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFluentUI.BFUToggle" Path="C:\Users\Dane\.nuget\packages\blazorfluentui.bfutoggle\4.0.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor" Path="C:\Users\Dane\.nuget\packages\syncfusion.blazor\18.4.0.35\build\..\staticwebassets\" />
+</StaticWebAssets>

@@ -82,7 +82,7 @@
     ITheme Theme => ThemeProvider?.Theme;
     public string myStyle = "display:none;";
     static System.Diagnostics.Stopwatch sw = null;
-    string url = "https://localhost:44393/notificationhub";
+    string url = "https://blazorrealtimeserver.azurewebsites.net/notificationhub";
     public static string limit = "";
     public static double controlledValue = 0;
     public static double controlledMutation = 0;
@@ -187,11 +187,24 @@
     {
         var client = new HttpClient();
 
-        client.BaseAddress = new Uri("http://localhost:8091/");
+        client.BaseAddress = new Uri("https://fitnessapp20210205105606.azurewebsites.net/runtime/webhooks/durabletask/entities/Message/myMessage?op=");
+
         client.DefaultRequestHeaders.Accept.Clear();
+        client.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", "*");
+        client.DefaultRequestHeaders.Add("x-functions-key", "4qiPl9le1Qi6mEEONh6vkhAtKdGpa4tnmcIwFnseVWH9aHlRDrKrkw==");
         client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));
-        var hrm = await client.PostAsJsonAsync("/target", t);
+            new MediaTypeWithQualityHeaderValue("text/html"));
+        var parallelHTML = new FormUrlEncodedContent(new[]
+{
+                new KeyValuePair<string, string>("", t.parallel.ToString())
+            });
+        var targetHTML = new FormUrlEncodedContent(new[]
+{
+                new KeyValuePair<string, string>("", t.target.ToString())
+            });
+        var hrm = await client.PostAsync("Add", targetHTML);
+        hrm = await client.PostAsync("AddParallel", parallelHTML);
+
         hrm.EnsureSuccessStatusCode();
         return;
     }
@@ -200,13 +213,15 @@
     {
         var client = new HttpClient();
 
-        client.BaseAddress = new Uri("http://localhost:8081/");
+        client.BaseAddress = new Uri("https://monkeysapp.azurewebsites.net/api/try?code=EUTIK0k2H1CqhLFXXQkXOIMiATzj/XibVva/3AfpF/6l8XbzrAqePQ==");
         client.DefaultRequestHeaders.Accept.Clear();
+        client.DefaultRequestHeaders.Add("x-functions-key", "2aGrT3JgwStwdVa2Iatjqfy5oDlZJIxGnS1G8tDeumXTpPpns33jrQ==");
+        client.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", "*");
         client.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/json"));
 
         //WriteLine($"[{tid()}] ... POST /try send {t}");
-        var hrm = await client.PostAsJsonAsync("/try", t);
+        var hrm = await client.PostAsJsonAsync("", t);
         hrm.EnsureSuccessStatusCode();
         return;
     }

@@ -421,7 +421,6 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\BlazorRealTime.Blazor.RazorComponent.input.cache
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
-C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
@@ -434,7 +433,6 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\BlazorRealTime.Blazor.RazorCoreGenerate.cache
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\Razor\App.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
-C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
@@ -738,8 +736,6 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\build-gz\cs6oQMqE.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\build-gz\SwMTAdCy.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\build-gz\MaKo4yBn.gz
-C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\RazorDeclaration\Pages\Home.razor.g.cs
-C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\Razor\Pages\Home.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\bin\Debug\net5.0\wwwroot\_framework\BlazorFluentUI.BFUFocusTrapZone.dll.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\bin\Debug\net5.0\wwwroot\_framework\BlazorFluentUI.BFUOverlay.dll.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\bin\Debug\net5.0\wwwroot\_framework\BlazorFluentUI.BFUPanel.dll.gz
@@ -756,3 +752,7 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\bin\Debug\net5.0\wwwroot\_framework\BlazorFluentUI.BFUMessageBar.dll.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\bin\Debug\net5.0\wwwroot\_framework\BlazorFluentUI.BFUMessageBar.dll
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\build-gz\tbwf02V0.gz
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\RazorDeclaration\Pages\Monkeys.razor.g.cs
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\Razor\Pages\Monkeys.razor.g.cs
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\RazorDeclaration\Pages\About.razor.g.cs
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Debug\net5.0\Razor\Pages\About.razor.g.cs

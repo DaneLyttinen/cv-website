@@ -27,6 +27,7 @@
         "dependencies": {
           "BlazorFluentUI.BFUTheme": "4.0.2",
           "Carter": "5.2.0",
+          "Microsoft.AspNetCore.Components.WebAssembly.Server": "5.0.2",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Proxy": "0.2.0",
@@ -404,6 +405,17 @@
           "Microsoft.Extensions.DependencyInjection": "5.0.0",
           "Microsoft.JSInterop": "5.0.0",
           "System.IO.Pipelines": "5.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Components.WebAssembly.Server/5.0.2": {
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Components.WebAssembly.Server.dll": {
+            "assemblyVersion": "5.0.2.0",
+            "fileVersion": "5.0.220.61302"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Components.WebAssembly.Server.dll": {}
         }
       },
       "Microsoft.AspNetCore.Connections.Abstractions/2.2.0": {
@@ -3134,6 +3146,13 @@
       "sha512": "sha512-TYnULwOuF43ITRlL02CmVoXLb1t1NSNbmUXuIrS4IMJd+HjK+sIisTRoJOr4L13LDWmOr1OM8teA04tOFf4I6w==",
       "path": "microsoft.aspnetcore.components.web/5.0.0",
       "hashPath": "microsoft.aspnetcore.components.web.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.WebAssembly.Server/5.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-E4g2aJKOq7abRvIu5xvwjiN1Zn/fBXEFppiiMJqRTvFJoShtmg9TC92u09JKYV3Z11Yp17M3ZfFq0d6BDvl/lQ==",
+      "path": "microsoft.aspnetcore.components.webassembly.server/5.0.2",
+      "hashPath": "microsoft.aspnetcore.components.webassembly.server.5.0.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Connections.Abstractions/2.2.0": {
       "type": "package",

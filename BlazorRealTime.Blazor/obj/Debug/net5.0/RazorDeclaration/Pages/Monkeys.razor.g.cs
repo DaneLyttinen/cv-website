@@ -134,7 +134,7 @@ using System.ComponentModel.DataAnnotations;
     ITheme Theme => ThemeProvider?.Theme;
     public string myStyle = "display:none;";
     static System.Diagnostics.Stopwatch sw = null;
-    string url = "https://localhost:44393/notificationhub";
+    string url = "blazorrealtimesignalr.service.signalr.net";
     public static string limit = "";
     public static double controlledValue = 0;
     public static double controlledMutation = 0;

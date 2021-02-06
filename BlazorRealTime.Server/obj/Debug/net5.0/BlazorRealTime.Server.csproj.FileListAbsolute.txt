@@ -34,3 +34,13 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Server\obj\Debug\net5.0
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Server\obj\Debug\net5.0\BlazorRealTime.Server.csprojAssemblyReference.cache
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Server\bin\Debug\net5.0\Microsoft.AspNetCore.Proxy.dll
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Server\bin\Debug\net5.0\BlazorFluentUI.BFUTheme.dll
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Server\bin\Debug\net5.0\BlazorDebugProxy\BrowserDebugHost.dll
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Server\bin\Debug\net5.0\BlazorDebugProxy\BrowserDebugHost.runtimeconfig.json
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Server\bin\Debug\net5.0\BlazorDebugProxy\BrowserDebugProxy.dll
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Server\bin\Debug\net5.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Server\bin\Debug\net5.0\BlazorDebugProxy\Microsoft.CodeAnalysis.dll
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Server\bin\Debug\net5.0\BlazorDebugProxy\Mono.Cecil.dll
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Server\bin\Debug\net5.0\BlazorDebugProxy\Mono.Cecil.Pdb.dll
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Server\bin\Debug\net5.0\BlazorDebugProxy\Mono.Cecil.Rocks.dll
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Server\bin\Debug\net5.0\BlazorDebugProxy\Newtonsoft.Json.dll
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.WebAssembly.Server.dll

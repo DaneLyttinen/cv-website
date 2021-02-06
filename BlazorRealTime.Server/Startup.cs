@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.JSInterop;
 
+
 namespace BlazorRealTime.Server
 {
     public class Startup
@@ -46,12 +47,11 @@ namespace BlazorRealTime.Server
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BlazorRealTime.Server v1"));
-            }
+            app.UseBlazorFrameworkFiles();
+
+            app.UseDeveloperExceptionPage();
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BlazorRealTime.Server v1"));
 
             
 
@@ -63,6 +63,8 @@ namespace BlazorRealTime.Server
             {
                 endpoints.MapHub<NotificationHub>("/notificationhub");
                 endpoints.MapControllers();
+                endpoints.MapDefaultControllerRoute();
+                endpoints.MapFallbackToFile("index.html");
             });
         }
 
