@@ -30,24 +30,6 @@ namespace BlazorRealTime.Server.Controllers
             await _hubContext.Clients.All.SendAsync("notification", title);
             return Ok("Notification sent");
         }
-
-        //[HttpPost]
-        //[EnableCors("CorsPolicy")]
-        //public async Task<IActionResult> Post([FromQuery] TargetRequest treq)
-        //{
-        //    var client = new HttpClient();
-
-        //    client.BaseAddress = new Uri("http://localhost:8091/");
-        //    client.DefaultRequestHeaders.Accept.Clear();
-        //    client.DefaultRequestHeaders.Accept.Add(
-        //        new MediaTypeWithQualityHeaderValue("application/json"));
-        //    //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(""));
-        //    //client.DefaultRequestHeaders.Accept.Add("Access-Control-Allow-Origin", "*");
-        //    //WriteLine($"[{tid()}] ... POST /target send {t}");
-        //    var hrm = await client.PostAsJsonAsync("/target", treq);
-        //    hrm.EnsureSuccessStatusCode();
-        //    return Ok("Target Sent");
-        //}
         public class TopRequest
         {
             public int id { get; set; }

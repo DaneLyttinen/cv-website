@@ -1,3 +1,6 @@
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\android-chrome-192x192.png
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\android-chrome-512x512.png
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\apple-touch-icon.png
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\app.css
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\bootstrap\bootstrap.min.css
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\bootstrap\bootstrap.min.css.map
@@ -11,6 +14,8 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\open-iconic\ICON-LICENSE
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\open-iconic\README.md
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\debug.log
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\favicon-16x16.png
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\favicon-32x32.png
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\favicon.ico
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\images\Chimpanzee.jpg
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\images\notflix.JPG
@@ -20,6 +25,7 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\images\Resume.png
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\index.html
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\sample-data\weather.json
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\site.webmanifest
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\_framework\dotnet.timezones.blat
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\_framework\dotnet.wasm
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\_framework\icudt.dat
@@ -309,6 +315,9 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\web.config
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\_framework\blazor.boot.json
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\_framework\blazor.webassembly.js
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\android-chrome-192x192.png.br
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\android-chrome-512x512.png.br
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\apple-touch-icon.png.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\app.css.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\bootstrap\bootstrap.min.css.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\bootstrap\bootstrap.min.css.map.br
@@ -322,6 +331,8 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\open-iconic\ICON-LICENSE.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\open-iconic\README.md.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\debug.log.br
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\favicon-16x16.png.br
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\favicon-32x32.png.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\favicon.ico.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\images\Chimpanzee.jpg.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\images\notflix.JPG.br
@@ -331,6 +342,7 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\images\Resume.png.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\index.html.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\sample-data\weather.json.br
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\site.webmanifest.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\_framework\dotnet.timezones.blat.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\_framework\dotnet.wasm.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\_framework\icudt.dat.br
@@ -619,6 +631,9 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\_framework\System.Private.CoreLib.dll.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\_framework\blazor.boot.json.br
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\_framework\blazor.webassembly.js.br
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\android-chrome-192x192.png.gz
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\android-chrome-512x512.png.gz
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\apple-touch-icon.png.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\app.css.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\bootstrap\bootstrap.min.css.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\bootstrap\bootstrap.min.css.map.gz
@@ -632,6 +647,8 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\open-iconic\ICON-LICENSE.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\css\open-iconic\README.md.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\debug.log.gz
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\favicon-16x16.png.gz
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\favicon-32x32.png.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\favicon.ico.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\images\Chimpanzee.jpg.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\images\notflix.JPG.gz
@@ -641,6 +658,7 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\images\Resume.png.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\index.html.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\sample-data\weather.json.gz
+C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\site.webmanifest.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\_framework\dotnet.timezones.blat.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\_framework\dotnet.wasm.gz
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\browser-wasm\PubTmp\Out\wwwroot\_framework\icudt.dat.gz

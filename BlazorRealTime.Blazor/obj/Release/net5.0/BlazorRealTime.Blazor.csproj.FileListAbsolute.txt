@@ -489,7 +489,6 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\RazorDeclaration\Pages\Monkeys.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\RazorDeclaration\Pages\Resume.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\RazorDeclaration\Pages\Sub.razor.g.cs
-C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\RazorDeclaration\_Imports.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
@@ -504,7 +503,6 @@ C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\Razor\Pages\Monkeys.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\Razor\Pages\Resume.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\Razor\Pages\Sub.razor.g.cs
-C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\Razor\_Imports.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\Razor\Shared\MainLayout.razor.g.cs
 C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\obj\Release\net5.0\Razor\Shared\NavMenu.razor.g.cs

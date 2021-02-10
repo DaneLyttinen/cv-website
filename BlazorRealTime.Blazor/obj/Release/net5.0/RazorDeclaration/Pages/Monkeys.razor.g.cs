@@ -117,6 +117,13 @@ using System.ComponentModel.DataAnnotations;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 9 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\Monkeys.razor"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/monkeys")]
     public partial class Monkeys : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -126,7 +133,7 @@ using System.ComponentModel.DataAnnotations;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 78 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\Monkeys.razor"
+#line 89 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\Monkeys.razor"
        
 
     [Inject]
@@ -141,11 +148,13 @@ using System.ComponentModel.DataAnnotations;
     public static string monkeys = "";
     HubConnection _connection = null;
     bool isConnected = false;
+    bool isConnectedSend = true;
     string connectionStatus = "Closed";
     private bool? BoundChecked = false;
     bool? Checked;
     bool? Disabled;
     private bool onDismissIsClicked = false;
+    bool sent = false;
 
     static int tid() { return System.Threading.Thread.CurrentThread.ManagedThreadId; }
     protected override void OnInitialized()
@@ -175,17 +184,20 @@ using System.ComponentModel.DataAnnotations;
         _connection = new HubConnectionBuilder()
             .WithUrl(url)
             .Build();
-
+        connectionStatus = "Connecting...";
         await _connection.StartAsync();
         isConnected = true;
-        connectionStatus = "Connected :-)";
+        isConnectedSend = false;
+        connectionStatus = "Connected!";
 
         _connection.Closed += async (s) =>
         {
             isConnected = false;
+            isConnectedSend = true;
             connectionStatus = "Disconnected";
             await _connection.StartAsync();
             isConnected = true;
+            isConnectedSend = false;
         };
 
         _connection.On<TopRequest>("notification", m =>
@@ -213,7 +225,7 @@ using System.ComponentModel.DataAnnotations;
     private async Task Send()
     {
         notifications.Clear();
-
+        sent = true;
         if (!(IsNumber(monkeys) || IsNumber(limit)) || messageInput.Length < 1)
         {
             OnDismissClose();
@@ -227,36 +239,48 @@ using System.ComponentModel.DataAnnotations;
         TargetRequest areq = new TargetRequest { id = 44393, parallel = parallelInput, target = messageInput };
         alength = string.IsNullOrEmpty(messageInput) ? 1 : messageInput.Length;
         TryRequest treq = new TryRequest { id = 44393, parallel = parallelInput, monkeys = monkeysInput, length = alength, crossover = crossoverInput, mutation = mutationInput, limit = limitInput };
-        sw = new System.Diagnostics.Stopwatch();
-        sw.Start();
+        var JsonResult = await CheckIfChanged();
+        while(JsonResult.target != messageInput)
+        {
+            await Task.Delay(2000);
+            JsonResult = await CheckIfChanged();
+        }
         PostTarget(areq);
         PostTry(treq);
-        //await Http.PostAsJsonAsync("http://localhost:8091/", areq);
-        //await Http.PostAsJsonAsync("https://localhost:44393/api/notifications?treq=", treq);
+        sw = new System.Diagnostics.Stopwatch();
+        sw.Start();
+    }
+
+    async Task<TargetRequest> CheckIfChanged()
+    {
+        var client = new HttpClient();
+        //client.BaseAddress = new Uri("https://fitnessapp20210205105606.azurewebsites.net/runtime/webhooks/durabletask/entities/Message/myMessage?code=EUTIK0k2H1CqhLFXXQkXOIMiATzj/XibVva/3AfpF/6l8XbzrAqePQ==&op=Get");
+        client.BaseAddress = new Uri("http://localhost:7071/runtime/webhooks/durabletask/entities/Message/myMessage?code=EUTIK0k2H1CqhLFXXQkXOIMiATzj/XibVva/3AfpF/6l8XbzrAqePQ==&op=Get");
+        client.DefaultRequestHeaders.Accept.Clear();
+        client.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", "*");
+        client.DefaultRequestHeaders.Add("x-functions-key", "4qiPl9le1Qi6mEEONh6vkhAtKdGpa4tnmcIwFnseVWH9aHlRDrKrkw==");
+        client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));
+        var content = await client.GetAsync("");
+        content.EnsureSuccessStatusCode();
+        //string data = await content.Content.ReadAsStringAsync();
+        return await content.Content.ReadFromJsonAsync<TargetRequest>();
+
     }
 
     public static async void PostTarget(TargetRequest t)
     {
         var client = new HttpClient();
 
-        client.BaseAddress = new Uri("https://fitnessapp20210205105606.azurewebsites.net/runtime/webhooks/durabletask/entities/Message/myMessage?op=");
+        client.BaseAddress = new Uri("https://fitnessapp20210205105606.azurewebsites.net/api/target?code=EUTIK0k2H1CqhLFXXQkXOIMiATzj/XibVva/3AfpF/6l8XbzrAqePQ==");
 
         client.DefaultRequestHeaders.Accept.Clear();
         client.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", "*");
         client.DefaultRequestHeaders.Add("x-functions-key", "4qiPl9le1Qi6mEEONh6vkhAtKdGpa4tnmcIwFnseVWH9aHlRDrKrkw==");
         client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("text/html"));
-        var parallelHTML = new FormUrlEncodedContent(new[]
-{
-                new KeyValuePair<string, string>("", t.parallel.ToString())
-            });
-        var targetHTML = new FormUrlEncodedContent(new[]
-{
-                new KeyValuePair<string, string>("", t.target.ToString())
-            });
-        var hrm = await client.PostAsJsonAsync("Add", targetHTML);
-        hrm = await client.PostAsync("AddParallel", parallelHTML);
+            new MediaTypeWithQualityHeaderValue("application/json"));
 
+        var hrm = await client.PostAsJsonAsync("", t);
         hrm.EnsureSuccessStatusCode();
         return;
     }
