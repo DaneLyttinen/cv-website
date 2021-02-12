@@ -26,11 +26,11 @@
                ShowValue="true" />
     <BFUTextField Label="loop limit" @bind-Value=@limit @bind-Value:event="OnInput" Placeholder="Enter a integer" />
     <div class="buttons">
-        <button @onclick="Send" type="button" class="btn btn-primary" disabled="@isConnectedSend">Send</button>
-        <button class="btn btn-success" @onclick="async () => await ConnectToServer()" disabled="@isConnected">Connect</button>
-        <button type="button" class="btn btn-info" @onclick='async () => messageInput = "To be or not to be, that is the question"'>Sample Message</button>
+        <button @onclick="Send" type="button" class="btn btn-primary" disabled="@isConnectedSend" id="button-left">Send</button>
+        <button class="btn btn-success" @onclick="async () => await ConnectToServer()" disabled="@isConnected" id="button-left">Connect</button>
+        <button type="button" class="btn btn-info" @onclick='async () => messageInput = "To be or not to be, that is the question"' id="button-left">Sample Message</button>
     </div>
-    <h3>Connection Status: @connectionStatus</h3>
+    <h3 id="connection">Connection Status: @connectionStatus</h3>
 </div>
 <div class="explaination">
     <p>
@@ -195,12 +195,12 @@
         var JsonResult = await CheckIfChanged();
         // Check that the durable entity function has actually changed value, sometimes it can take a bit longer than expected to change states and if it hasn't the algorithm won't work properly.
         // So here we will not continue on sending the requests until the durable entity has changed states to the new message.
-        while(JsonResult.target != messageInput)
+        PostTarget(areq);
+        while (JsonResult.target != messageInput)
         {
-            await Task.Delay(2000);
+            await Task.Delay(500);
             JsonResult = await CheckIfChanged();
         }
-        PostTarget(areq);
         PostTry(treq);
         sw = new System.Diagnostics.Stopwatch();
         sw.Start();

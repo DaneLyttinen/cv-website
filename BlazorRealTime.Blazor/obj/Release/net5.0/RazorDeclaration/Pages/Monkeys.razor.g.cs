@@ -157,6 +157,7 @@ using Newtonsoft.Json;
     bool sent = false;
 
     static int tid() { return System.Threading.Thread.CurrentThread.ManagedThreadId; }
+    // Change the theme palette of the BlazorFluentUi to dark mode so it's visible with current layout. 
     protected override void OnInitialized()
     {
         var palette = new DefaultPaletteDark();
@@ -164,7 +165,7 @@ using Newtonsoft.Json;
 
         base.OnInitialized();
     }
-
+    // The two below functions will help the error message hide as it hasn't been properly implemented yet as a fully functional BlazorFluentUi component.
     private void OnDismiss()
     {
         myStyle = "display:none;";
@@ -178,7 +179,7 @@ using Newtonsoft.Json;
     }
 
     public static List<TopRequest> notifications = new List<TopRequest>();
-
+    // Connect to the Azure API to handle the requests and display them on the website properly 
     private async Task ConnectToServer()
     {
         _connection = new HubConnectionBuilder()
@@ -221,7 +222,7 @@ using Newtonsoft.Json;
         Regex regex = new Regex(@"^[-+]?[0-9]*\.?[0-9]+$");
         return regex.IsMatch(text);
     }
-
+    // Create the request classes and send them to start the algoithm and communication between 2 Azure functions 1 durable entity function and an Azure API
     private async Task Send()
     {
         notifications.Clear();
@@ -240,22 +241,24 @@ using Newtonsoft.Json;
         alength = string.IsNullOrEmpty(messageInput) ? 1 : messageInput.Length;
         TryRequest treq = new TryRequest { id = 44393, parallel = parallelInput, monkeys = monkeysInput, length = alength, crossover = crossoverInput, mutation = mutationInput, limit = limitInput };
         var JsonResult = await CheckIfChanged();
-        while(JsonResult.target != messageInput)
+        // Check that the durable entity function has actually changed value, sometimes it can take a bit longer than expected to change states and if it hasn't the algorithm won't work properly.
+        // So here we will not continue on sending the requests until the durable entity has changed states to the new message.
+        PostTarget(areq);
+        while (JsonResult.target != messageInput)
         {
-            await Task.Delay(2000);
+            await Task.Delay(500);
             JsonResult = await CheckIfChanged();
         }
-        PostTarget(areq);
         PostTry(treq);
         sw = new System.Diagnostics.Stopwatch();
         sw.Start();
     }
-
+    //This is where we check for the state of the durable Entity through get requests
     async Task<TargetRequest> CheckIfChanged()
     {
         var client = new HttpClient();
-        //client.BaseAddress = new Uri("https://fitnessapp20210205105606.azurewebsites.net/runtime/webhooks/durabletask/entities/Message/myMessage?code=EUTIK0k2H1CqhLFXXQkXOIMiATzj/XibVva/3AfpF/6l8XbzrAqePQ==&op=Get");
-        client.BaseAddress = new Uri("http://localhost:7071/runtime/webhooks/durabletask/entities/Message/myMessage?code=EUTIK0k2H1CqhLFXXQkXOIMiATzj/XibVva/3AfpF/6l8XbzrAqePQ==&op=Get");
+        client.BaseAddress = new Uri("https://fitnessapp20210205105606.azurewebsites.net/runtime/webhooks/durabletask/entities/Message/myMessage?code=EUTIK0k2H1CqhLFXXQkXOIMiATzj/XibVva/3AfpF/6l8XbzrAqePQ==&op=Get");
+        //client.BaseAddress = new Uri("http://localhost:7071/runtime/webhooks/durabletask/entities/Message/myMessage?code=EUTIK0k2H1CqhLFXXQkXOIMiATzj/XibVva/3AfpF/6l8XbzrAqePQ==&op=Get");
         client.DefaultRequestHeaders.Accept.Clear();
         client.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", "*");
         client.DefaultRequestHeaders.Add("x-functions-key", "4qiPl9le1Qi6mEEONh6vkhAtKdGpa4tnmcIwFnseVWH9aHlRDrKrkw==");
@@ -263,7 +266,6 @@ using Newtonsoft.Json;
             new MediaTypeWithQualityHeaderValue("application/json"));
         var content = await client.GetAsync("");
         content.EnsureSuccessStatusCode();
-        //string data = await content.Content.ReadAsStringAsync();
         return await content.Content.ReadFromJsonAsync<TargetRequest>();
 
     }

@@ -98,7 +98,7 @@ using BlazorFluentUI;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 84 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\About.razor"
+#line 89 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\About.razor"
        
     [CascadingParameter(Name = "Theme")]
     public ITheme Theme { get; set; }

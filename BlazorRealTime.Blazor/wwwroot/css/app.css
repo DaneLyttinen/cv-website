@@ -6,6 +6,11 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: rgb(255,255,255);
     background-color:black;
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    overflow-x:hidden;
 }
 
 .display-4 {
@@ -16,6 +21,15 @@ html, body {
     -webkit-text-stroke: 0.5px black;
     color: white;
     font-size: 2vw;
+}
+
+.text-box {
+    height: 500px;
+    width: 70%;
+    border: 1px solid #555555;
+    position: relative;
+    overflow: hidden;
+    
 }
 
 a, .btn-link {
@@ -253,5 +267,58 @@ a, .btn-link {
 
     50% {
         transform: scale(1.5);
+    }
+}
+
+@media (max-width: 641px) {
+    .the {
+        width: 100%;
+        height:300px;
+        background-position:center;
+    }
+    .display-4 {
+        line-height:300px;
+    }
+    .text-box {
+        width:100%;
+        height: 1250px;
+    }
+    .Center {
+        width:100%;
+    }
+    #title {
+        font-size:65px;
+    }
+    .btn {
+        width:135px;
+    }
+    .btn-outline-light{
+        float:right;
+    }
+    .portfolio {
+        float:left;
+        margin-bottom:20px;
+    }
+    #connection{
+        font-size:17px;
+    }
+    .explaination{
+        display:none;
+    }
+    .content {
+
+    }
+    .Form {
+        width:100%;
+    }
+    #button-left {
+        float:left;
+        margin-bottom:2px;
+        margin-right:2px;
+    }
+
+    #resume{
+        width:100%;
+        height:400px;
     }
 }
