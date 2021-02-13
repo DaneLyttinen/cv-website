@@ -133,7 +133,7 @@ using Newtonsoft.Json;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 89 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\Monkeys.razor"
+#line 92 "C:\Users\Dane\source\repos\BlazorRealTime\BlazorRealTime.Blazor\Pages\Monkeys.razor"
        
 
     [Inject]
